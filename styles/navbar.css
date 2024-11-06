@@ -62,7 +62,7 @@ main {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Adjust the z-index if needed */
+    z-index: 1000;
 }
 
 .NavBar ul {
@@ -80,9 +80,8 @@ main {
     font-family: "Druk Wide Bold";
 }
 
-#logo {
-    font-size: 14px;
-    color: #ECFB5B;
+.can-item {
+    color: #ECFB5B !important;
 }
 
 .NavBar li {
@@ -93,17 +92,17 @@ main {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.5);
     width: 20%;
+    cursor: pointer;
 }
 
 .NavBar li:hover {
-    color:white;
+    color:#ECFB5B;
 }
 
 .hover__div {
     position: absolute;
     width: 20%;
     height: 100%;
-    /*border: 1px solid blue; */
     transition: 0.25s;
     pointer-events: none;
     will-change: transfrom;
