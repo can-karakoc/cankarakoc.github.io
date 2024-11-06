@@ -1,3 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --border-color: #5B68DF;
+    --background-color: #020F20;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    color: white;
+    scroll-snap-align: start;
+    transition: background 0.8s;
+}
+
 .contentLogo {
     display: flex;
     align-items: center;
@@ -17,4 +43,21 @@
     font-family: 'Inter';
     font-size: 14px;
 }
+
+/* Full-screen sections */
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+    transition: background 0.5s;
+}
+
+/* Specific styles for each section */
+#about { background: #1a1a2e; }
+#projects { background: #16213e; }
+#resume { background: #0f3460; }
+#play { background: #53354a; }
 

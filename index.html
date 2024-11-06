@@ -10,30 +10,44 @@
 </head>
     
 <body>
-    <div class="overlay" id="hero"> 
-        <div class="NavBarWrap">
-            <div class="NavBar stick">
-                <div class="hover__div">
-                    <div class="topLeft"></div>
-                    <div class="topRight"></div>
-                    <div class="bottomLeft"></div>
-                    <div class="bottomRight"></div>
-                </div>
-                <ul>
-                    <li><a href="#"></a>ABOUT ME</li>
-                    <li><a href="#"></a>PROJECTS</li>
-                    <li class="can-item"><a href="#"></a>CAN</li>
-                    <li><a href="#"></a>PLAY</li>
-                    <li><a href="#"></a>RESUME</li>
-                </ul>
+    <div class="NavBarWrap">
+        <div class="NavBar stick">
+            <div class="hover__div">
+                <div class="topLeft"></div>
+                <div class="topRight"></div>
+                <div class="bottomLeft"></div>
+                <div class="bottomRight"></div>
             </div>
-        </div>
-        
-        <div class="contentLogo">
-            <h1 class="nameLogo">CAN KARAKOC</h1>
-            <p>I’m a Computer Science and Data Science Major at UC Berkeley with an interest in data-driven research, computational biology, and human-centered design.</p>
+            <ul>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li class="can-item"><a href="#can">CAN</a></li>
+                <li><a href="#resume">RESUME</a></li>
+                <li><a href="#play">PLAY</a></li>
+            </ul>
         </div>
     </div>
+
+    <section id="about">
+        <h1>About Me</h1>
+        <p>Content for the About Me section.</p>
+    
+    </section>
+    
+    <section id="projects">
+        <h1>Projects</h1>
+        <p>Content for the Projects section.</p>
+    </section>
+    
+    <section id="resume">
+        <h1>Resume</h1>
+        <p>Content for the Resume section.</p>
+    </section>
+    
+    <section id="play">
+        <h1>Play</h1>
+        <p>Content for the Play section.</p>
+    </section>
 </body>
 
 <script>
@@ -107,4 +121,47 @@
         new Link(link, idx)
     })
 </script>
+
+<script>
+    let currentSectionIndex = 0;
+    let isScrolling = false;
+
+    const sections = document.querySelectorAll("section");
+
+    function scrollToSection(index) {
+        if (index < 0 || index >= sections.length) return;
+        sections[index].scrollIntoView({ behavior: "smooth" });
+        currentSectionIndex = index;
+    }
+
+    window.addEventListener("wheel", (event) => {
+        if (isScrolling) return; 
+
+        isScrolling = true; 
+        if (event.deltaY > 0) {
+            scrollToSection(currentSectionIndex + 1);
+        } else {
+            scrollToSection(currentSectionIndex - 1);
+        }
+        setTimeout(() => { isScrolling = false; }, 1000);
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                currentSectionIndex = Array.from(sections).indexOf(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    sections.forEach(section => observer.observe(section));
+
+    document.querySelectorAll(".NavBar li a").forEach((link, idx) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            scrollToSection(idx);
+        });
+    });
+</script>
+
 </html>

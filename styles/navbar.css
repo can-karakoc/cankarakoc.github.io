@@ -1,49 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --border-color: #5B68DF;
-    --background-color: #020F20;
-}
-
-.overlay {
-    display: flex;
-    background: transparent;
-    background-color: transparent;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-}
-
-.home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    margin: 0;
-    background: var(--background-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
 .NavBarWrap {
     position: fixed;
     top: 0;
@@ -76,11 +30,11 @@ main {
     position: relative;
     align-items: center;
     justify-content: space-between;
-    list-style: None;
+    list-style: None !important;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 20px;
     font-family: "Druk Wide Bold";
 }
