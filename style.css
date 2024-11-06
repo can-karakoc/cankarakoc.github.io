@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --border-color: #ECFB5B;
+}
+
+:root {
+    --border-color: #ECFB5B;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background: #040F0F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavBarWrap {
+    position: absolute;
+    top: 0;
+    display: flex;
+    padding: 16px 213px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #2E2E2E;
+}
+
+.NavBar {
+    display: flex;
+    width: 1014px;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.NavBar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust the z-index if needed */
+}
+
+.NavBar ul {
+    display: flex;
+    width: 1014px;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    list-style: None;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Druk Wide Bold";
+}
+
+#logo {
+    font-size: 14px;
+    color: #ECFB5B;
+}
+
+.NavBar li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5);
+    width: 20%;
+}
+
+.NavBar li:hover {
+    color:white;
+}
+
+.hover__div {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    /*border: 1px solid blue; */
+    transition: 0.25s;
+    pointer-events: none;
+    will-change: transfrom;
+    opacity: 0;
+}
+
+.hover__div.active{
+    opacity: 1;
+}
+
+.topLeft {
+    position: absolute;
+    top:0;
+    left:0;
+    width:5%;
+    height:10%;
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    border-radius: 0.5px;
+}
+
+.topRight {
+    position: absolute;
+    top:0;
+    right:0;
+    width:5%;
+    height:10%;
+    border-right: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    border-radius: 0.5px;
+}
+
+.bottomRight {
+    position: absolute;
+    bottom:0;
+    right:0;
+    width:5%;
+    height:10%;
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0.5px;
+}
+
+.bottomLeft {
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:5%;
+    height:10%;
+    border-left: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0.5px;
+}
