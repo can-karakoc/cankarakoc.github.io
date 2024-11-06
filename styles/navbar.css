@@ -5,11 +5,17 @@
 }
 
 :root {
-    --border-color: #ECFB5B;
+    --border-color: #5B68DF;
+    --background-color: #020F20;
 }
 
-:root {
-    --border-color: #ECFB5B;
+.overlay {
+    display: flex;
+    background: transparent;
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
 }
 
 .home {
@@ -23,7 +29,7 @@
 
 body {
     margin: 0;
-    background: #040F0F;
+    background: var(--background-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,13 +45,12 @@ main {
 }
 
 .NavBarWrap {
-    position: absolute;
+    position: fixed;
     top: 0;
     display: flex;
     padding: 16px 213px;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #2E2E2E;
+    justify-content: top;
+    align-items: start;
 }
 
 .NavBar {
@@ -81,7 +86,7 @@ main {
 }
 
 .can-item {
-    color: #ECFB5B !important;
+    color: var(--border-color) !important;
 }
 
 .NavBar li {
@@ -96,7 +101,7 @@ main {
 }
 
 .NavBar li:hover {
-    color:#ECFB5B;
+    color: var(--border-color);
 }
 
 .hover__div {

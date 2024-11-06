@@ -1,0 +1,20 @@
+.contentLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.nameLogo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 72px;
+    color: #FEFDF9;
+}
+
+.contentLogo p {
+    color: #FEFDF9;
+    font-family: 'Inter';
+    font-size: 14px;
+}
+

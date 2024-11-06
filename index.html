@@ -6,41 +6,46 @@
     <title>cankarkaoc</title>
     <script src="https://cdn.rawgit.com/sarathsaleem/grained/master/grained.js"></script>
     <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/title.css">
 </head>
     
 <body>
-    <div class="NavBarWrap" id="hero">
-        <div class="NavBar stick">
-            <div class="hover__div">
-                <div class="topLeft"></div>
-                <div class="topRight"></div>
-                <div class="bottomLeft"></div>
-                <div class="bottomRight"></div>
-            </div>
-            <ul>
-                    <li><a href="#"></a>WORK</li>
+    <div class="overlay" id="hero"> 
+        <div class="NavBarWrap">
+            <div class="NavBar stick">
+                <div class="hover__div">
+                    <div class="topLeft"></div>
+                    <div class="topRight"></div>
+                    <div class="bottomLeft"></div>
+                    <div class="bottomRight"></div>
+                </div>
+                <ul>
                     <li><a href="#"></a>ABOUT ME</li>
+                    <li><a href="#"></a>PROJECTS</li>
                     <li class="can-item"><a href="#"></a>CAN</li>
                     <li><a href="#"></a>PLAY</li>
                     <li><a href="#"></a>RESUME</li>
-            </ul>
+                </ul>
+            </div>
         </div>
-    </div>
+        
+        <div class="contentLogo">
+            <h1 class="nameLogo">CAN KARAKOC</h1>
+            <p>I’m a Computer Science and Data Science Major at UC Berkeley with an interest in data-driven research, computational biology, and human-centered design.</p>
+        </div>
     </div>
 </body>
 
 <script>
     var options = {
-      "animate": true,
-      "patternWidth": 600,
-      "patternHeight": 600,
-      "grainOpacity": 1.2,
-      "grainDensity": 1.6,
-      "grainWidth": 0.2,
-      "grainHeight": 0.2,
+        "animate": true,
+        "patternWidth": 53.23,
+        "patternHeight": 328.79,
+        "grainOpacity": 0.1,
+        "grainDensity": 4,
+        "grainWidth": 2,
+        "grainHeight": 2
     }
-    
-    grained("#hero", options);
     
     const hoverDiv = document.querySelector('.hover__div');
     const navBar = document.querySelector('.NavBar');
